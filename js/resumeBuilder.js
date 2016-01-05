@@ -11,7 +11,7 @@ var bio = {
 		'location': 'Richmond, CA'
 	},
 	'welcomeMessage': 'Happy feast of winter veil',
-	'skills': ['Python', 'HTML', 'CSS'],
+	'skills': ['Python', 'HTML5', 'CSS3', 'JS', 'jQuery', 'AJAX', 'Jasmine', 'Java', 'SQLite', 'PostgreSQL', 'Google App Engine', 'AWS', 'Flask', 'Django', 'OAuth', 'Linux', 'Apache', 'Polymer', 'bootstrap', 'API', 'GIMP', 'Inkscape', 'Git', 'Android'],
 	'biopic': 'images/fry.jpg'
 };
 
