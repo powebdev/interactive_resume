@@ -5,7 +5,7 @@ var bio = {
 	'name': 'Po Tong',
 	'role': 'Front End Developer',
 	'contacts': {
-		'mobile': '510-410-6985',
+		'mobile': '555-867-5309',
 		'email': 'potong616@gmail.com',
 		'github': 'powebdev',
 		'location': 'Richmond, CA'
@@ -149,7 +149,7 @@ var work = {};
 work.jobs = [
 	{
 		'employer': 'First Order',
-		'title': 'Starkiller base Janitor',
+		'title': 'Starkiller Base Janitor',
 		'location': 'Richmond, CA',
 		'dates': 'July 2014 - December 2015',
 		'description': 'something something darkside'
@@ -157,15 +157,15 @@ work.jobs = [
 	{
 		'employer': 'Galactic Empire',
 		'title': 'Handrail installer',
-		'location': 'Richmond, CA',
+		'location': 'Tacoma, WA',
 		'dates': 'November 2013 - July 2014',
 		'description': 'something something complete'
 	},
 	{
 		'employer': 'The Old Republic',
 		'title': 'Force Dude',
-		'location': 'Richmond, VA',
-		'dates': '2013 - 2014',
+		'location': 'Pensacola, FL',
+		'dates': '2012 - 2013',
 		'description': 'nooooooooooooooooooooooooooooo'
 	}
 ];
@@ -197,22 +197,22 @@ work.display = function() {
 var projects = {};
 projects.projects = [
 	{
+		'title': 'Portfolio Page',
+		'dates': 2016,
+		'description': 'My portfolio page',
+		'images': ['images/portfolio.png']
+	},
+	{
 		'title': 'Video Game Catalog',
 		'dates': 2015,
-		'description': 'A database backed website for video game cataloging',
-		'images': ['http://placehold.it/100x100']
+		'description': 'Project 3 for Udacity Full Stack Nanodegree. A database backed website for video game cataloging',
+		'images': ['images/vgdb.png']
 	},
 	{
 		'title': 'Conference Organization App',
 		'dates': 2015,
-		'description': 'Organize conferences',
-		'images': ['http://placehold.it/100x100', 'http://placehold.it/100x100']
-	},
-	{
-		'title': 'Portfolio Page',
-		'dates': 2015,
-		'description': 'My portfolio page',
-		'images': ['http://placehold.it/100x100']
+		'description': 'Project 4 for Udacity Full Stack Nanodegree. An app built using Google App Engine which allows user to organize and signup for conferences',
+		'images': ['images/conference.png']
 	}
 ];
 
@@ -257,3 +257,10 @@ work.display();
  * adding google map to resume
  */
 $("#mapDiv").append(googleMap);
+
+$("div.card").mouseover(function() {
+	$(this).find(".project-description").toggleClass("show");
+});
+$("div.card").mouseout(function() {
+	$(this).find(".project-description").toggleClass("show");
+});
