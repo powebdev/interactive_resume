@@ -150,21 +150,21 @@ work.jobs = [
 	{
 		'employer': 'First Order',
 		'title': 'Starkiller base Janitor',
-		'location': 'Starkiller Base',
+		'location': 'Richmond, CA',
 		'dates': 'July 2014 - December 2015',
 		'description': 'something something darkside'
 	},
 	{
 		'employer': 'Galactic Empire',
 		'title': 'Handrail installer',
-		'location': 'Death Star mk I',
+		'location': 'Richmond, CA',
 		'dates': 'November 2013 - July 2014',
 		'description': 'something something complete'
 	},
 	{
 		'employer': 'The Old Republic',
 		'title': 'Force Dude',
-		'location': 'Coruscant',
+		'location': 'Richmond, VA',
 		'dates': '2013 - 2014',
 		'description': 'nooooooooooooooooooooooooooooo'
 	}
@@ -252,3 +252,8 @@ bio.display();
 projects.display();
 education.display();
 work.display();
+
+/*
+ * adding google map to resume
+ */
+$("#mapDiv").append(googleMap);
