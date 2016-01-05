@@ -43,7 +43,7 @@ var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
 
 var HTMLmyProjectContainer = '<div class="container" id="projects-container"></div>';
-var HTMLmyProjectStart = '<div class="col"><div class="card" id="my-project-entry"></div></div>';
+var HTMLmyProjectStart = '<div class="col"><div class="card my-project-entry"></div></div>';
 var HTMLmyProjectCard = '<project-card name="" iamge="" url="" description="" dates=""></project-card>';
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
