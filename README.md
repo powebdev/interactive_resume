@@ -5,7 +5,7 @@ Project 2 for Udacity Front-End Web Developer Nanodegree
 
 How to Run Project
 -----------------------------------------------------------------------------
-The webpage is hosted on GitHub. Visit the website by going to <a href='http://powebdev.github.io/interactive_resume/'>Resume</a></br>
+The project is hosted on GitHub. Visit the website by going to <a href='http://powebdev.github.io/interactive_resume/'>Resume</a></br>
 
 Exceeds Specifications Requirements:
 -----------------------------------------------------------------------------
