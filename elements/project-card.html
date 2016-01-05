@@ -1,0 +1,63 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<dom-module id="project-card">
+	<template>
+
+		<style>
+		.project-img {
+			margin: 0;
+			padding: 0;
+			width: 320px;
+		}
+
+		.project-title {
+
+		}
+
+		.project-description {
+			position: absolute;
+			background: white;
+			margin: 0;
+			padding: 10px;
+			top: 350px;
+			width: 320px;
+			height: 350px;
+			transition: 0.3s;
+		}
+
+		</style>
+		<img class="project-img" src="{{image}}" alt="{{description}}">
+		<h3 class="project-title">{{name}}</h3>
+		<p>{{dates}}</p>
+		<p class="project-description">{{description}}
+			<a href="{{url}}">project page</a>
+		</p>
+
+	</template>
+	<script>
+	Polymer({
+		is: "project-card",
+		properties: {
+			image: {
+				type: String,
+				value: ""
+			},
+			name: {
+				type: String,
+				value: "PROJECT"
+			},
+			url: {
+				type: String,
+				value: "#"
+			},
+			description: {
+				type: String,
+				value: "asdasdasdasdasd"
+			},
+			dates: {
+				type: String,
+				value: "2016"
+			}
+		}
+	});
+	</script>
+</dom-module>

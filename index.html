@@ -48,6 +48,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   -->
  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
   <meta name="viewport" content="width=device-width">
+  <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+  <link rel="import" href="elements/project-card.html">
 </head>
 <body unresolved>
   <div id="main">
@@ -66,30 +68,6 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     </div>
     <div id="projects">
       <h2>Projects</h2>
-
-	  <div class="container">
-		  <div class="col">
-			  <div class="card">
-				  <img class="project-img" src="images/conference.png" alt="">
-				  <h3 class="project-title">PROJECT</h3>
-				  <p>2015</p>
-				  
-				  <p class="project-description">asdasdasdasdasdasdasdsadsadasdadasdas
-					  <a href="#">project page</a>
-				  </p>
-			  </div>			  			  
-		  </div>
-		  <div class="col">
-			  <div class="card">123</div>			  			  
-		  </div>
-		  <div class="col">
-			  <div class="card">123</div>			  			  
-		  </div>
-		  <div class="col">
-			  <div class="card">123</div>			  			  
-		  </div>
-	  </div>
-
     </div>
     <div id="education" class='gray'>
       <h2>Education</h2>
@@ -144,7 +122,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     if(document.getElementsByClassName('work-entry').length === 0) {
       document.getElementById('workExperience').style.display = 'none';
     }
-    if(document.getElementsByClassName('project-entry').length === 0) {
+    if(document.getElementsByIDName('my-project-entry').length === 0) {
       document.getElementById('projects').style.display = 'none';
     }
     if(document.getElementsByClassName('education-entry').length === 0) {

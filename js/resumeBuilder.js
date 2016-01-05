@@ -148,14 +148,14 @@ education.display = function() {
 var work = {};
 work.jobs = [
 	{
-		'employer': 'First Order',
+		'employer': 'The First Order',
 		'title': 'Starkiller Base Janitor',
 		'location': 'Richmond, CA',
 		'dates': 'July 2014 - December 2015',
 		'description': 'something something darkside'
 	},
 	{
-		'employer': 'Galactic Empire',
+		'employer': 'The Galactic Empire',
 		'title': 'Handrail installer',
 		'location': 'Tacoma, WA',
 		'dates': 'November 2013 - July 2014',
@@ -200,19 +200,22 @@ projects.projects = [
 		'title': 'Portfolio Page',
 		'dates': 2016,
 		'description': 'My portfolio page',
-		'images': ['images/portfolio.png']
+		'images': ['images/portfolio.png'],
+		'url': 'http://powebdev.github.io/'
 	},
 	{
 		'title': 'Video Game Catalog',
 		'dates': 2015,
 		'description': 'Project 3 for Udacity Full Stack Nanodegree. A database backed website for video game cataloging',
-		'images': ['images/vgdb.png']
+		'images': ['images/vgdb.png'],
+		'url': 'http://powebdev.github.io/catalog_project/'
 	},
 	{
 		'title': 'Conference Organization App',
 		'dates': 2015,
 		'description': 'Project 4 for Udacity Full Stack Nanodegree. An app built using Google App Engine which allows user to organize and signup for conferences',
-		'images': ['images/conference.png']
+		'images': ['images/conference.png'],
+		'url': 'http://powebdev.github.io/p4_conference/'
 	}
 ];
 
@@ -221,27 +224,23 @@ projects.display = function() {
 	var formattedProjectDates = '';
 	var formattedProjectDescription = '';
 	var formattedProjectImage = '';
-	var numberOfImages = 0;
-	for (var projects_i = 0; projects_i < projects.projects.length; projects_i++) {
-		formattedProjectTitle = HTMLprojectTitle.replace(
-			'%data%', projects.projects[projects_i].title);
-		formattedProjectDates = HTMLprojectDates.replace(
-			'%data%', projects.projects[projects_i].dates);
-		formattedProjectDescription = HTMLprojectDescription.replace(
-			'%data%', projects.projects[projects_i].description);
 
-		$("#projects").append(HTMLprojectStart);
-		$(".project-entry:last").append(formattedProjectTitle);
-		$(".project-entry:last").append(formattedProjectDates);
-		$(".project-entry:last").append(formattedProjectDescription);
-		numberOfImages = projects.projects[projects_i].images.length;
-		if (numberOfImages > 0) {
-			for (var images_i = 0; images_i < numberOfImages; images_i++) {
-				formattedProjectImage = HTMLprojectImage.replace(
-					'%data%', projects.projects[projects_i].images[images_i]);
-				$(".project-entry:last").append(formattedProjectImage);
-			}
-		}
+	$("#projects").append(HTMLmyProjectContainer);
+	for (var projects_i = 0; projects_i < projects.projects.length; projects_i++) {
+		var project = projects.projects[projects_i];
+
+		$("#projects-container").append(HTMLmyProjectStart);
+		$(".card:last").append(HTMLmyProjectCard);
+		$("project-card:last").attr(
+			"name", project.title);
+		$("project-card:last").attr(
+			"image", project.images[0]);
+		$("project-card:last").attr(
+			"url", project.url);
+		$("project-card:last").attr(
+			"description", project.description);
+		$("project-card:last").attr(
+			"dates", project.dates);
 	}
 };
 
